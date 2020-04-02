@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a href="" class="navbar-brand text-white">JWT Auth System</a>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+
+<div class="card m-5" style="width: 18rem" *ngIf="userDetails">
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Username: </strong>{{userDetails.userName}}</li>
+    <li class="list-group-item"><strong>FullName: </strong>{{userDetails.fullName}}</li>
+    <li class="list-group-item"><strong>Email: </strong>{{userDetails.email}}</li>
+  </ul>
+</div>
+<div class="room">
+  <div class="room-div">
+    <div class="tab-header">
+      <h3>Chat Rooms</h3>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 left-chat">
+          <ul class="room-container">
+            <li *ngFor="let room of rooms; index as i" (click)="selectRoom(i)" class="list-group-item list-group-color">
+              <strong><a class="list-group-color-a">Room {{i}}</a></strong></li>
+          </ul>
+          <button type="button" class="room-button btn btn-primary" (click)="addRoom()">Add Room</button>
+        </div>
+        <div class="col-md-6 room-container-div">
+          <div *ngFor="let room of rooms; index as i">
+            <div [hidden]="selectedRoom !== i">
+              <app-room></app-room>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
