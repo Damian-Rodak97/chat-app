@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/dcae7681-3e25-44f2-baee-fbbf4b5bdf1e/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ChatApplicationAngular",
+    "appService.deploySubpath": ""
+}

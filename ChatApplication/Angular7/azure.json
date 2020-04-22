@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "Angular7",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/Angular7"
+      },
+      "azureHosting": {
+        "subscription": "dcae7681-3e25-44f2-baee-fbbf4b5bdf1e",
+        "resourceGroupName": "Angular7-static-deploy",
+        "account": "angular7static"
+      }
+    }
+  ]
+}
